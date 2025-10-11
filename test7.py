@@ -10,13 +10,13 @@ class MyThread(threading.Thread):
 
     def run(self):
         print("开始线程：" + self.name)
-        moyu_time(self.name, self.counter, 10)
+        moyu_time(self.name, self.counter, 10, self.threadID)
         print("退出线程：" + self.name)
 
-def moyu_time(threadName, delay, counter):
+def moyu_time(threadName, delay, counter, threadID):
     while counter:
         time.sleep(delay)
-        print("%s 开始摸鱼 %s" % (threadName, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
+        print("%s 开始摸鱼 %s 线程ID为: %s" % (threadName, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), threadID))
         counter -= 1
         if counter == 0:
             print("摸鱼结束")
@@ -33,5 +33,3 @@ thread2.start()
 thread1.join()
 thread2.join()
 print("退出主线程")
-
-# https://mp.weixin.qq.com/s?__biz=Mzg2NzYyNjg2Nw==&mid=2247489908&idx=1&sn=19c8dfda7163f221a8490cd0a64966e4&chksm=ceb9e368f9ce6a7e223fabb30afc70cac4f30eff3acca0656e3df0fdbb1dbc2d4a300b0c2d2e&cur_album_id=2448798954764255234&scene=189#wechat_redirect
