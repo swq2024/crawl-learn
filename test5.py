@@ -13,7 +13,7 @@ import time
 # options.add_experimental_option("detach", True)
 # browser = webdriver.Chrome(options=options)
 
-browser =webdriver.Chrome()
+browser = webdriver.Chrome()
 WAIT = WebDriverWait(browser, 10) # 最多等待10秒
 browser.set_window_size(1400, 900) # 设置浏览器窗口大小
 
