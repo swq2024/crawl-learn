@@ -96,5 +96,3 @@ if __name__ == "__main__":
 #     end = time.time()
 #     print(f"耗时: {round(end - start)} 秒")
 #     print("抓取完成.")
-
-# https://mp.weixin.qq.com/s?__biz=Mzg2NzYyNjg2Nw==&mid=2247489916&idx=1&sn=8431cf83b36ba846a82fc5af540d9eb8&chksm=ceb9e360f9ce6a7676ae6f6cf34e9d8a9f222fedec4f761ad90ec5c6fe227f608ce25abce484&cur_album_id=2448798954764255234&scene=189#wechat_redirect
