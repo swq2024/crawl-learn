@@ -21,6 +21,14 @@
         div>button:last-child {
             background-color: plum;
         }
+        /* 
+            在使用pdfkit把html转为pdf格式时，如果遇到表格截断问题
+            在表格外层套一层div加上这个类名，然后在css中加上这段代码即可解决
+         */
+         .truncation {
+            page-break-inside: avoid !important;
+        }
+
     </style>
 </head>
 

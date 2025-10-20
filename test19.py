@@ -63,7 +63,7 @@ def write_image():
             image_list = image_dict['images']
             # 创建目录保存图片
             clean_title = clean_special_chars(title).strip()
-            dir_path = os.path.join('doutupk_images', clean_title) # 根目录下创建 doutupk_images 文件夹
+            dir_path = os.path.join('doutupk_images2', clean_title) # 根目录下创建 doutupk_images 文件夹
             # 确保目录存在
             os.makedirs(dir_path, exist_ok=True)
             
