@@ -19,11 +19,20 @@ PROXY_IP = get_proxy()
 
 url = "http://127.0.0.1:5000/getInfo"
 
+proxies = {
+    "https": "http://{}".format(PROXY_IP)
+}
+
+# 添加X-Forwarded-For头
+# X-Forwarded-For头通常包含客户端的真实IP地址
+# 这样做是为了让服务器认为这是一个真正的用户发出的请求
+# 这也是一种常见的反代理检测手段
+headers['X-Forwarded-For'] = PROXY_IP
+
 response = requests.get(
     url,
     headers=headers,
-    proxies={
-        "https":"http://{}".format(PROXY_IP)
-        }
-    )
+    proxies=proxies,
+    verify=False  # 如果是https请求可能需要这个
+)
 print(response.text)
